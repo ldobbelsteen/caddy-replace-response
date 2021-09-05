@@ -6,4 +6,4 @@ RUN xcaddy build \
 
 FROM alpine
 COPY --from=bin-builder /usr/bin/caddy /usr/bin/caddy
-CMD ["caddy", "run"]
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]
